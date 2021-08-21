@@ -1,0 +1,37 @@
+<div class="dettaglio-studente">
+	<div>
+		<h2>Nominativo</h2>
+		<p>[NOME] [COGNOME]</p>
+		<h3>Data di nascita</h3>
+		<p>[DATADINASCITA]</p>
+		<h3>Classe</h3>
+		<p>[CLASSE] [SEZIONE]</p>
+		<hr>
+		<h3>Voti</h3>
+		<table id="voti">
+			<thead>
+				<tr>
+					<th>Materia</th>
+					<th>Punteggio</th>
+					<th>Opzioni</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- voti -->
+			</tbody>
+		</table>
+	</div>
+	<div>
+		<form action="Index" method="POST">
+			<input type="hidden" name="cmd" value="editvoto"> 
+			<input type="hidden" name="idstudente" value="[ID]">
+			<input type="hidden" name="idvoto" value="[IDVOTO]">
+			<input type="text" placeholder="Materia" name="materia" value="[MATERIA]">
+			<input type="number" placeholder="Punteggio" name="punteggio" value="[PUNTEGGIO]">
+			<input type="submit" value="Modifica">
+			<a href="Index?cmd=dettaglio&id=[ID]" >
+				<button type="button" class="form-btn red">Annulla</button>
+			</a> 
+		</form>
+	</div>
+</div>
